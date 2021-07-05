@@ -1,3 +1,5 @@
+package com.devel.threads;
+
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -31,7 +33,7 @@ class Consumer2 implements Runnable {
             stack.notify();
             // Thread.sleep(new Random(System.currentTimeMillis()).nextInt(3000));
         }
-        // If we want a more randomized behaviour set the timer here to the same boundary as the Producer
+        // If we want a more randomized behaviour set the timer here to the same boundary as the com.devel.threads.Producer
         Thread.sleep(new Random(System.currentTimeMillis()).nextInt(2000));
     }
 }
@@ -69,8 +71,8 @@ class Producer2 implements Runnable {
             // Thread.sleep(new Random(System.currentTimeMillis()).nextInt(2000));
         }
         // Setting the sleep here after releasing the lock creates a more random effect.
-        // Since the sleep timer is larger on the Consumer we will see pretty much always the Producer waiting on the Consumer
-        // We will see a message always on the Producer trying to add but the stack is full
+        // Since the sleep timer is larger on the com.devel.threads.Consumer we will see pretty much always the com.devel.threads.Producer waiting on the com.devel.threads.Consumer
+        // We will see a message always on the com.devel.threads.Producer trying to add but the stack is full
         Thread.sleep(new Random(System.currentTimeMillis()).nextInt(20));
     }
 

@@ -1,3 +1,4 @@
+import com.devel.exercises.lambda.Strings;
 import org.junit.jupiter.api.Assertions;
 
 class StringsTest {
