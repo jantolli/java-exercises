@@ -1,3 +1,5 @@
+package com.devel.exercises.lambda;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -6,8 +8,7 @@ import java.util.stream.Collectors;
 public class Strings {
 
     public static String getUniqueCharsUsingLambda(String str) {
-        String result = str.chars().mapToObj((int m) -> (char) m).distinct().map(o -> o.toString()).collect(Collectors.joining());
-        result = String.join("", result);
+        String result = str.chars().mapToObj((int m) -> (char) m).distinct().map(o -> o.toString()).collect(Collectors.joining(""));
         return result;
     }
 
